@@ -1,0 +1,114 @@
+{% load static %}
+{% load widget_tweaks %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin</title>
+    <link rel="stylesheet" href="{% static 'admin-assets/css/admin-login/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'admin-assets/css/admin-login/style.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      .errorlist {
+        list-style-type: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+
+    <section class="hero admin">
+
+        <aside>
+            <div class="wrapper">
+
+
+                <div class="col_left">
+                    <div class="img-box">
+                        <img src="{% static 'admin-assets/img/admin-login/left-bg.jpg' %}" alt="">
+                    </div>
+
+                </div>
+
+
+                <div class="col_right">
+                    <div class="form_box">
+                        {% for message in messages %} {% if message.tags %}
+                    <div
+                      class="alert alert-{{ message.tags }} alert-dismissible"
+                      role="alert"
+                    >
+                      {{ message }}
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    {% else %}
+                    <div
+                      class="alert alert-info alert-dismissible"
+                      role="alert"
+                    >
+                      {{ message }}
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>                  {% endif %} {% endfor %}
+                        <div class="header">
+                            <div class="logo_box">
+                                <img src="{% static 'admin-assets/img/admin-login/logo.png' %}" alt="">
+                            </div>
+                            <h1 class="title">Admin</h1>
+                        </div>
+                        <form method="post" action="{% url 'admin-login' %}">
+                            {% csrf_token %}
+                            <div class="form_sec">
+                                <div class="input_box">
+                                    <label class="label_text" >email</label>
+                                    <input type="text" name="username" placeholder="Email">
+                                </div>
+                                <div class="input_box">
+                                    <label class="label_text">password</label>
+                                    <input type="text" name="password" placeholder="Password">
+                                </div>
+                                <div class="checkbox_box">
+                                    <label class="container">remember me
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <a href="login.html" class="text">forgot password</a>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-warning">Continue</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </section>
+    <script src="{% static 'admin-assets/js/admin-login/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

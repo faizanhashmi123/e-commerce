@@ -1,0 +1,119 @@
+{% extends "administrator/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block body %}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Emporia device</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <button class="btn btn-primary"><a class="text-white" href="{% url 'admin-user-add' %}">Add Emporia Device</a></button>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <table id="example2" class="table table-striped table-sm table-hover w-100">
+              <thead>
+              <tr>
+                <th>Customer</th>
+                <th>Device Name</th>
+                <th>Device id</th>
+                <th>Zip Code</th>
+                <th>utility</th>
+                <th>Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>deependra@lab.com</td>
+                <td>Evan austin</td>
+                <td>A2208A05B534865D5D7EA4</td>
+                <td>78704</td>
+                <td>Austin Energy</td>
+                <td class=" text-right">
+                    <a href="" role="button" class="btn btn-info btn-sm mr-1">View</a>
+                    <a href="javascript:;" class="remove_record btn btn-warning btn-sm" data-url="" role="button">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>ajay@lab.com</td>
+                <td>2-54</td>
+                <td>A2202A05B534865D69D6D4</td>
+                <td>78704</td>
+                <td>Public Service Elec & Gas Co</td>
+                <td class=" text-right">
+                    <a href="" role="button" class="btn btn-info btn-sm mr-1">View</a>
+                    <a href="javascript:;" class="remove_record btn btn-warning btn-sm" data-url="" role="button">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>sager@lab.com</td>
+                <td>Evan austin</td>
+                <td>A2208A05B524D7EB9C9440</td>
+                <td>78704</td>
+                <td>Austin Energy</td>
+                <td class=" text-right">
+                    <a href="" role="button" class="btn btn-info btn-sm mr-1">View</a>
+                    <a href="javascript:;" class="remove_record btn btn-warning btn-sm" data-url="" role="button">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>rohan@lab.com</td>
+                <td>5131 Bayou Timber</td>
+                <td>A1970L77BBa0b1a0b1a0b1</td>
+                <td>78704</td>
+                <td>Public Service Elec & Gas Co</td>
+                <td class=" text-right">
+                    <a href="" role="button" class="btn btn-info btn-sm mr-1">View</a>
+                    <a href="javascript:;" class="remove_record btn btn-warning btn-sm" data-url="" role="button">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>deependra@lab.com</td>
+                <td>32 Andrew dr</td>
+                <td>A2208A05B53083987C0C18</td>
+                <td>78704</td>
+                <td>Public Service Elec & Gas Co</td>
+                <td class=" text-right">
+                    <a href="" role="button" class="btn btn-info btn-sm mr-1">View</a>
+                    <a href="javascript:;" class="remove_record btn btn-warning btn-sm" data-url="" role="button">Edit</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+<!--<div  class="modal fade">-->
+<!--      <form id="model-form-delete" action="" method="post" >-->
+<!--      {% csrf_token %}-->
+<!--        <button type="submit" class="btn btn-danger"></button>-->
+<!--      </form>-->
+<!--</div>-->
+<!--<input type="hidden" name="list_page_url" id="list_page_url" value="{% url 'admin-user-list-ajax' %}">-->
+
+{% endblock %}

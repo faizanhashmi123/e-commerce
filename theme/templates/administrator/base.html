@@ -1,0 +1,52 @@
+{% load static %}
+{% include "administrator/header.html" %}
+{% block static%}
+{% endblock %}
+<body class="hold-transition sidebar-mini layout-fixed">
+
+    <!-- Begin page -->
+<div class="wrapper">
+        <!-- Preloader -->
+<!--      <div class="preloader flex-column justify-content-center align-items-center">-->
+<!--        <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">-->
+<!--      </div>-->
+        <!-- Top Bar Start -->
+        {% include "administrator/topbar.html" %}
+        <!-- Top Bar End -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        {% include "administrator/sidebar.html" %}
+        <!-- Left Sidebar End -->
+
+        <!-- Start right Content here -->
+      <div class="content-wrapper">
+          {% block body %}
+
+          {% endblock %}
+
+      </div>
+
+        <!-- End Right content here -->
+        <footer class="main-footer">
+    <strong>Copyright &copy; 2022-2023 <a href="#">Arthonsys Django Starter.io</a>.</strong> All rights reserved.
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 0.0.1
+    </div>
+  </footer>
+
+
+    </div>
+    <!-- END wrapper -->
+
+
+{% include "administrator/footer.html" %}
+    <script>
+        {% block script%}
+        {% endblock %}
+    </script>
+
+
+</body>
+
+</html>

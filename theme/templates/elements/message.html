@@ -1,0 +1,13 @@
+{% if messages %}
+  {% for message in messages %}
+    {% if message.tags == 'success'%}
+        <script>
+            alertify.success("{{ message }}");
+        </script>
+    {% elif message.tags == 'danger'%}
+        <script>
+            alertify.error("{{ message }}");
+        </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,57 @@
+{% extends "administrator/base.html" %}
+{% load widget_tweaks %}
+
+{% block body %}
+<style>
+ #id_template_choice{
+     margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    }
+
+ #id_template_choice li{
+    margin-right: 20px;
+    }
+</style>
+
+<div class="content">
+                    <div class="container-fluid">
+                        <div class="page-title-box">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
+                                    <h4 class="page-title">{% if form.instance.id %}Update{% else %}Create{% endif %} Brand</h4>
+                                </div>
+
+                            </div> <!-- end row -->
+                        </div>
+                        <!-- end page-title -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                    <form class="form-horizontal m-t-30" method="POST" enctype="multipart/form-data">
+
+                                        {% include "elements/form.html" with form=form %}
+<!--                                        {% include "elements/form.html" with form=user_form %}-->
+                                        {{form.errors}}
+<!--                                        {{user_form.errors}}-->
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="reset" class="btn btn-secondary">Reset</button>
+                                        <button type="cancel" class="btn btn-danger"><a class="text-white" href="{% url 'brand-list' %}">Cancel</a></button>
+                                    </form>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+
+
+                    </div>
+                    <!-- container-fluid -->
+
+                </div>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "administrator/base.html" %}
+{% load widget_tweaks %}
+
+{% block body %}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Customer Detail</h1>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+          <div class="card card-info">
+            <div class="card-header">
+              <h3 class="card-title"></h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Name</td>
+                      <td>{{ user.get_full_name }}</td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td>{{ user.email }}</td>
+                    </tr>
+                    <tr>
+                      <td>Status</td>
+                      <td>{% if user.is_active %} Active {% else %} Inactive {% endif %}</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+            </div>
+            <!-- /.card-body -->
+
+            <!-- /.card-footer -->
+          </div>
+
+      </div>
+      <!-- /.col -->
+    </div>
+    <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Emporia Devices</h3>
+
+
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>Device ID</th>
+                      <th>Device Name</th>
+                      <th>Zip Code</th>
+                      <th>Utility</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for emporia_device in emporia_devices %}
+                    <tr>
+                      <td>{{ emporia_device.device_id }}</td>
+                      <td>{{ emporia_device.device_name }}</td>
+                      <td>{{ emporia_device.zip_code }}</td>
+                      <td>{{ emporia_device.utility.utility_name }}</td>
+                      <td>{{ emporia_device.description }}</td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+
+    <!-- /.row -->
+  </div>
+  </section>
+<!-- /.content -->
+
+{% endblock %}

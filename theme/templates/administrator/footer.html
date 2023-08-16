@@ -1,0 +1,122 @@
+{% load static %}
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'plugins/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- ChartJS -->
+<script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+<!-- Sparkline -->
+<script src="{% static 'plugins/sparklines/sparkline.js' %}"></script>
+<!-- JQVMap -->
+<script src="{% static 'plugins/jqvmap/jquery.vmap.min.js' %}"></script>
+<script src="{% static 'plugins/jqvmap/maps/jquery.vmap.usa.js' %}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'plugins/jquery-knob/jquery.knob.min.js' %}"></script>
+<!-- daterangepicker -->
+<script src="{% static 'plugins/moment/moment.min.js' %}"></script>
+<script src="{% static 'plugins/daterangepicker/daterangepicker.js' %}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{% static 'plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+<!-- Summernote -->
+<script src="{% static 'plugins/summernote/summernote-bs4.min.js' %}"></script>
+<!-- overlayScrollbars -->
+<script src="{% static 'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'admin-assets/js/adminlte.js' %}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{% static 'admin-assets/js/pages/dashboard.js' %}"></script>
+<!-- DataTables  & Plugins -->
+<script src="{% static 'plugins/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-responsive/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-responsive/js/responsive.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/jszip/jszip.min.js' %}"></script>
+<script src="{% static 'plugins/pdfmake/pdfmake.min.js' %}"></script>
+<script src="{% static 'plugins/pdfmake/vfs_fonts.js' %}"></script>
+<!--data table-->
+<script src="{% static 'plugins/datatables-buttons/js/buttons.html5.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.print.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.colVis.min.js' %}"></script>
+<!--chart-->
+<script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+<!--sweetalert-->
+<script src="{% static 'plugins/sweet-alert2/sweetalert2.min.js' %}"></script>
+<script src="{% static 'plugins/alertify/js/alertify.js' %}"></script>
+<script src="{% static 'plugins/json-viewer/json-viewer.js' %}"></script>
+{% include "elements/message.html" %}
+
+
+<script>
+  $(document).on('click','.remove_record', function(){
+        console.log('on delete')
+         var text = 'Do you really want to delete this record';
+         Swal.fire({
+           title: text,
+           text: 'This process cannot be undone.',
+           type: 'warning',
+           showCancelButton: true,
+           confirmButtonColor: '#d33',
+           cancelButtonColor: '#999999',
+           confirmButtonText: 'Delete!',
+           cancelButtonText: 'Cancel'
+         }).then((result) => {
+           if (result.value) {
+             var url = $(this).data("url")
+             $.ajax({        // initialize an AJAX request
+                        url: url,
+                        data: $('#model-form-delete').serialize(),
+                        method: 'POST',
+                        success: function (data) {
+                          oTable.ajax.reload( function(settings, json){
+                                        $('#id_count').html(settings.recordsTotal);
+                                    }, false );
+                          Swal.fire(
+                               'Deleted',
+                               '',
+                               'success'
+                             )
+                        }
+              });
+
+
+           } else if (result.dismiss === Swal.DismissReason.cancel) {
+             Swal.fire(
+               'Cancelled',
+               '',
+               'error'
+             )
+           }
+         })
+     });
+
+    var ajaxUrl = $('#list_page_url').val();
+    var oTable = $('#datatable').DataTable({
+          "pageLength":10,
+          "serverSide": true,
+
+          "ordering": true,
+              columnDefs: [{
+              "width": "20%",
+              orderable: false,
+              targets: "no-sort"
+              }],
+          "language": {
+          "emptyTable": "No data available"
+           },
+          "order": [],
+          "ajax": { "url": ajaxUrl },
+          "scrollX": true,
+          "initComplete": function(settings, json){
+                $('#id_count').html(settings.json.recordsTotal);
+           },
+           "columnDefs": [{
+                "targets": [-1],
+                "orderable": false,
+                "className": 'text-right'
+            }],
+    });
+</script>

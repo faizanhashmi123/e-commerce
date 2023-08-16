@@ -1,0 +1,50 @@
+{% extends "administrator/base.html" %}
+{% load widget_tweaks %}
+
+{% block body %}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>{% if form.instance.id %}Update{% else %}Product{% endif %} Add</h1>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- Horizontal Form -->
+          <div class="card card-info">
+            <div class="card-header">
+              <h3 class="card-title"></h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form class="form-horizontal" method="POST" enctype="multipart/form-data">
+              <div class="card-body">{% csrf_token %} {{form.as_p}}</div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <input type="submit" value="Upload" class="btn btn-primary">
+                <button type="reset" class="btn btn-secondary">Reset</button>
+                <a class="text-white btn btn-danger" href="{% url 'product-list' %}">Cancel</a>
+              </div>
+              <!-- /.card-footer -->
+            </form>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!--/.col (left) -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </section>
+<!-- /.content -->
+
+{% endblock %}

@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+
+body{
+    font-family: arial, serif;
+}
+
+a{
+    text-decoration: none !important;
+    color: #4b8dff;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #ffa500;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.login-head p.info a,
+.loginsec a{
+    color: #ffc107;
+}
+
+.login-box{
+    background: url('/static/admin-assets/img/customer/background.jpg') center / cover no-repeat;
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.login-box::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    background: rgb(0 0 0 / 45%);
+    width: 100%;
+    height: 100%;
+}
+.login-head .loginsec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 850px;
+    height: 520px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 4px 22px -8px #0004;
+    overflow: hidden;
+}
+.loginsec .left, .right{
+   width: 50%;
+}
+
+.loginsec .left .left-bg{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.loginsec .logo p{
+    color: #ffffff;
+    padding-top: 60px;
+    position: relative;
+    z-index: 3;
+}
+
+.loginsec .logo {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    text-align: center;
+}
+
+.loginsec .logo img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.login-head{
+    position: relative;
+    z-index: 66;
+}
+
+.loginsec form{
+    position: relative;
+    text-align: start;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.loginsec form .form-heading{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.loginsec form b{
+    font-size: 14px;
+    list-style: 15px;
+}
+
+.loginsec form .input-box{
+    position: relative;
+    margin-bottom: 15px;
+}
+.loginsec form .form-label{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.loginsec form .form-control{
+    height: 45px;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 0px;
+    background: transparent;
+}
+.loginsec form .form-control:focus{
+    border-color: #ddd;
+}
+
+.loginsec form .login-box .form-control::placeholder {
+    color: #888;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 1; /* Firefox */
+}
+.loginsec form .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #888;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.loginsec form .form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: #888;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+.registration-box{
+    height: 100%;
+    padding: 5% 0 7% 0;
+}
+.registration-box .loginsec{
+    height: 100%;
+}
+.registration-box .loginsec .left .left-bg{
+    height: 665px;
+}
+
+.loginsec form .btn-warning{
+    width: 100%;
+    padding: 4px 0px;
+    font-size: 15px;
+    height: 45px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.need-help {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginsec form .read-article{
+    font-size: 14px;
+}
+
+.loginsec ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.btn-dark{
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 45px;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #000;
+}
+.btn-dark:hover{
+   background-color: #000;
+}
+
+
+
+.login-footer{
+    width: 100%;
+    padding: 20px 0px;
+    margin-top: 9px;
+    background-color: #000;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 999;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.login-footer .copy_right p{
+    text-align: right;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+}
+.login-footer .footer-nav .link{
+    font-size: 14px;
+    margin: 0 14px;
+    color: #fff;
+}
+
+.login-footer .footer-nav .link:hover{
+    color: #ffc107;
+}
+
+.login-footer .container{
+    max-width: 90%;
+}
+
+
+
+@media (max-width:991px) {
+    .login-box{
+        padding-top: 32%;
+        padding-bottom: 40%;
+    }
+
+
+}
+@media (max-width:768px) {
+    .footer-nav{
+        justify-content: center;
+        padding: 0 0 12px 0;
+    }
+
+    .login-footer .footer-nav .link,
+    .login-footer .copy_right p{
+        font-size: 14px;
+    }
+    .registration-box .loginsec .left .left-bg {
+        height: 100%;
+    }
+    .copy_right {
+        border-top: 1px solid #555353;
+    }
+
+    .copy_right p{
+        padding: 10px 0 0 0;
+        text-align: center !important;
+    }
+
+    .login-box{
+        padding: 10% 0;
+        height: 100%;
+    }
+
+    .login-head{
+        padding-bottom: 20%;
+    }
+
+    .login-head .loginsec {
+        display: block !important;
+        height: 100%;
+    }
+
+    .login-head .loginsec .left{
+        width: 100% !important;
+        height: 480px;
+    }
+
+    .login-head .loginsec .right{
+        width: 100% !important;
+        height: 100%;
+    }
+}
+
+@media (max-width:576px) {
+    .login-footer .container {
+        max-width: 100%;
+    }
+
+    .login-head {
+        padding-bottom: 29%;
+    }
+
+    .need-help {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .login-footer .footer-nav .link{
+        margin: 0 10px;
+    }
+
+}

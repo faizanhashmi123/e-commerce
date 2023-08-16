@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="{% static 'admin-assets/css/home/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'admin-assets/css/home/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'admin-assets/css/home/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'admin-assets/css/home/responsive.css' %}">
+    
+<body>
+
+    <section class="topheader">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12">
+                    <div class="column-left">
+                        <ul class="list-item">
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-headphones"></i></span>
+                                    <span class="text"> +060 (800) 801-582</span>
+                                </a>    
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-envelope"></i></span>
+                                    <span class="text">info@.com</span>
+                                </a>    
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="column-right">
+                        <ul class="list-item">
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-location-dot"></i></span>
+                                    <span class="text">Store location</span>
+                                </a>    
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-clock"></i></span>
+                                    <span class="text">Daily deal</span>
+                                </a>    
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-user"></i></span>
+                                    <span class="text">my accout</span>
+                                </a>    
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-power-off"></i></span>
+                                    <span class="text">login</span>
+                                </a>    
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header class="header-center d-lg-block d-none">
+        <div class="container">
+            <div class="row align-content-center">
+                <div class="col-lg-2 col-md-2">
+                    <div class="logo">
+                        <a href="#"><img src="{% static 'admin-assets/img/home/logo.png' %}" alt="logo" class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <div class="search-bar">
+                        <div class="Category">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">all Category</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">All Category</a></li>
+                                  <li><a class="dropdown-item" href="#">watch</a></li>
+                                  <li><a class="dropdown-item" href="#">toys</a></li>
+                                  <li><a class="dropdown-item" href="#">mobile</a></li>
+                                  <li><a class="dropdown-item" href="#">kid’s item</a></li>
+                                </ul>
+                            </div>
+                            <form action="">
+                                <input type="text" placeholder="Search">
+                                <button class="btn btn-dark"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <div class="right-column">
+                        <div class="right-bar">
+                            <a href="#"><i class="fa fa-heart"></i></a>
+                        </div>
+                        <div class="right-bar">
+                            <a href="#" class="d-lg-block d-md-none"><i class="fa fa-user"></i></a>
+                        </div>
+                        <div class="right-bar">
+                            <a href="#"><i class="fa fa-bag-shopping"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="main_header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="navbar-brand d-lg-none d-md-block" href="#">logo</a>
+              <div class="search d-md-block d-lg-none d-block">
+                  <input type="text" class="form-control" placeholder="search">
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">porduct</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">shop</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Cart</a></li>
+                                <li><a class="dropdown-item" href="#">Checkout</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+         </nav>
+    </section>
+
+    <section class="hero-sec">
+        <div class="container">
+            <div class="hero">
+                <h1><span>UP TO 50% OFF</span><br>Shirt For Man</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate similique, repellat, eos soluta iste, voluptatum eum dolorum optio voluptate!</p>
+                <button class="btn btn-dark">shop now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="brandsec">
+       <div class="container-fluid">
+            <div class="swiper brand-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="contact-wrapper">
+                            <img src="{% static 'admin-assets/img/home/brand1.jpg' %}" alt="brandimg" class="img-fluid">
+                            <div class="brand-item">
+                                <h6>Man's Collectons</h6>
+                                <h3>Summer travel <br> collection</h3>
+                                <a href="#">Discover Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="contact-wrapper">
+                            <img src="{% static 'admin-assets/img/home/brand2.jpg' %}" alt="brandimg" class="img-fluid">
+                            <div class="brand-item">
+                                <h6>Man's Collectons</h6>
+                                <h3>Summer travel <br> collection</h3>
+                                <a href="#">Discover Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="contact-wrapper">
+                            <img src="{% static 'admin-assets/img/home/brand3.jpg' %}" alt="brandimg" class="img-fluid">
+                            <div class="brand-item">
+                                <h6>Man's Collectons</h6>
+                                <h3>Summer travel <br> collection</h3>
+                                <a href="#">Discover Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next d-none"></div>
+                <div class="swiper-button-prev d-none"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+       </div>
+    </section>
+
+
+    <section class="trending-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading">
+                        <h1 class="section-title">Trending Item</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="product">
+                        <ul class="product-menu">
+                            <li><a href="#" class="menu-link active">man</a></li>
+                            <li><a href="#" class="menu-link">woman</a></li>
+                            <li><a href="#" class="menu-link">kids</a></li>
+                            <li><a href="#" class="menu-link">toys</a></li>
+                            <li><a href="#" class="menu-link">appliances</a></li>
+                            <li><a href="#" class="menu-link">mobiles</a></li>
+                            <li><a href="#" class="menu-link">Grocery</a></li>
+                        </ul>
+
+                        <div class="banner-slider">
+                            <div class="swiper banner">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-head">
+                                                <img src="https://rukminim2.flixcart.com/image/200/200/kzegk280/action-figure/9/v/t/3-30155-mcfarlane-2-5-original-imagbeyyzehpyk2m.jpeg?q=70" class="img-fluid" alt="...">
+                                                <div class="card-bottom">
+                                                    <a href="#">add to card</a>
+                                                    <div class="view-gallery">
+                                                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                                        <a href="#"><i class="fa fa-chart-simple"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                              <h5 class="card-title"><a href="#">Women Hot Collection</a></h5>
+                                              <p class="card-text">$29.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-head">
+                                                <img src="https://rukminim2.flixcart.com/image/200/200/xif0q/t-shirt/3/d/i/l-jc22-hd-fs-black-jmc-pckt-jump-cuts-original-imagg3yxfk48y7nt.jpeg?q=70" class="img-fluid" alt="...">
+                                                <div class="card-bottom">
+                                                    <a href="#">add to card</a>
+                                                    <div class="view-gallery">
+                                                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                                        <a href="#"><i class="fa fa-chart-simple"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                              <h5 class="card-title"><a href="#">Women Hot Collection</a></h5>
+                                              <p class="card-text">$29.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-head">
+                                                <img src="https://rukminim2.flixcart.com/image/200/200/acoustic-guitar/e/y/y/dd-380c-blk-jixing-original-imaeff94e9tczafp.jpeg?q=70" class="img-fluid" alt="...">
+                                                <div class="card-bottom">
+                                                    <a href="#">add to card</a>
+                                                    <div class="view-gallery">
+                                                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                                        <a href="#"><i class="fa fa-chart-simple"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                              <h5 class="card-title"><a href="#">Women Hot Collection</a></h5>
+                                              <p class="card-text">$29.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-head">
+                                                <img src="https://rukminim2.flixcart.com/image/200/200/jxz0brk0/stuffed-toy/n/t/s/4-feet-pink-very-beautiful-best-quality-for-special-gift-125-13-original-imafgv92puzkdytg.jpeg?q=70" class="img-fluid" alt="...">
+                                                <div class="card-bottom">
+                                                    <a href="#">add to card</a>
+                                                    <div class="view-gallery">
+                                                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                                        <a href="#"><i class="fa fa-chart-simple"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                              <h5 class="card-title"><a href="#">Women Hot Collection</a></h5>
+                                              <p class="card-text">$29.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next d-none"></div>
+                                <div class="swiper-button-prev d-none"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <div class="banner-slider">
+                            <div class="swiper banner">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-head">
+                                                <img src="https://rukminim2.flixcart.com/image/200/200/xif0q/gown/1/c/m/na-5xl-full-sleeve-stitched-pal-1296-miss-clothing-na-original-imagqbxgggj98vzu.jpeg?q=70" class="img-fluid" alt="...">
+                                                <div class="card-bottom">
+                                                    <a href="#">add to card</a>
+                                                    <div class="view-gallery">
+                                                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                                        <a href="#"><i class="fa fa-chart-simple"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                              <h5 class="card-title"><a href="#">Women Hot Collection</a></h5>
+                                              <p class="card-text">$29.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-head">
+                                                <img src="https://rukminim2.flixcart.com/image/200/200/xif0q/backpack/d/o/2/-original-imagharftcqyha2a.jpeg?q=70" class="img-fluid" alt="...">
+                                                <div class="card-bottom">
+                                                    <a href="#">add to card</a>
+                                                    <div class="view-gallery">
+                                                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                                        <a href="#"><i class="fa fa-chart-simple"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                              <h5 class="card-title"><a href="#">Women Hot Collection</a></h5>
+                                              <p class="card-text">$29.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-head">
+                                                <img src="https://rukminim2.flixcart.com/image/200/200/kg5fzww0/spoon/6/t/w/spoon-set-12-pcs-unicus-original-imafwga7hhqucvsn.jpeg?q=70" class="img-fluid" alt="...">
+                                                <div class="card-bottom">
+                                                    <a href="#">add to card</a>
+                                                    <div class="view-gallery">
+                                                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                                        <a href="#"><i class="fa fa-chart-simple"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                              <h5 class="card-title"><a href="#">Women Hot Collection</a></h5>
+                                              <p class="card-text">$29.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-head">
+                                                <img src="https://rukminim2.flixcart.com/image/200/200/xif0q/toy-weapon/z/h/7/8-hole-electric-bubbles-gun-for-toddlers-toys-gatling-bubble-original-imaghq7b8q3hhvut.jpeg?q=70" class="img-fluid" alt="...">
+                                                <div class="card-bottom">
+                                                    <a href="#">add to card</a>
+                                                    <div class="view-gallery">
+                                                        <a href="#"><i class="fa-regular fa-eye"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                                        <a href="#"><i class="fa fa-chart-simple"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                              <h5 class="card-title"><a href="#">Women Hot Collection</a></h5>
+                                              <p class="card-text">$29.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next d-none"></div>
+                                <div class="swiper-button-prev d-none"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading">
+                        <h1 class="section-title">From Our Blog</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                       <img src="{% static 'admin-assets/img/home/blog1.jpg' %}" alt="blogimage" class="img-fluid">
+                       <div class="card-body">
+                        <span class="card-title">dolor sit amet consectetur.</span>
+                        <a href="#"><h2 class="card-text">Lorem ipsum consectetur.</h2></a>
+                        <a href="#">Continue Reading</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                       <img src="{% static 'admin-assets/img/home/blog2.jpg' %}" alt="blogimage" class="img-fluid">
+                       <div class="card-body">
+                        <span class="card-title">dolor sit amet consectetur.</span>
+                        <a href="#"><h2 class="card-text">Lorem ipsum consectetur.</h2></a>
+                        <a href="#">Continue Reading</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                       <img src="{% static 'admin-assets/img/home/blog3.jpg' %}" alt="blogimage" class="img-fluid">
+                       <div class="card-body">
+                        <span class="card-title">dolor sit amet consectetur.</span>
+                        <a href="#"><h2 class="card-text">Lorem ipsum consectetur.</h2></a>
+                        <a href="#">Continue Reading</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                   <div class="contact-item">
+                        <p class="title">NEWSLETTER</p>
+                        <p class="destext">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <form action="" class="">
+                            <div class="input-box">
+                                <input type="text" class="form-control" placeholder="your email address">
+                                <button class="btn btn-warning">Subscribe</button>
+                            </div>
+                      </form>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6">
+                    <div class="footer-logo">
+                       <a href="#"><img src="{% static 'admin-assets/img/home/logo.png' %}" alt="logo" class="img-fluid"></a>
+                       <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laboriosam at quae cupiditate voluptate assumenda hic maiores! Ratione fugiat sit perspiciatis quos cum.</p>
+                       <h6><a href="#" class="contact-no">+0123 456 789</a></h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-content_box">
+                        <h6 class="section-title">Information</h6>
+                        <ul class="footer-nav">
+                            <li class="footer-item"><a class="footer-link" href="#">About Us</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">Faq</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">Terms & Conditions</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">Contact Us</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-content_box">
+                        <h6 class="section-title">Customer Service</h6>
+                        <ul class="footer-nav">
+                            <li class="footer-item"><a class="footer-link" href="#">Payment Methods</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">Money-back</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">Returns</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">Shipping</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-content_box">
+                        <h6 class="section-title">Get In Tuch</h6>
+                        <ul class="footer-nav">
+                            <li class="footer-item"><a class="footer-link" href="#">NO. 342 - London Oxford Street.</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">012 United Kingdom.</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">Terms & Conditions</a></li>
+                            <li class="footer-item"><a class="footer-link" href="#">info@eshop.com</a></li>
+                        </ul>
+                        <ul class="social">
+                            <li class="social-item"><a href="#" class="social-link"><i class="fa-brands fa-google-play"></i></a></li>
+                            <li class="social-item"><a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li class="social-item"><a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li class="social-item"><a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copy-right_footer">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="left">
+                            <p>Copyright © 2023 <a href="#">Wpthemesgrid</a> - All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="right">
+                            <img src="{% static 'admin-assets/img/home/payment.png' %}" alt="paymentimg" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{%  static  'admin-assets/js/home/bootstrap.bundle.min.js' %}"></script>
+    <script src="{%  static  'admin-assets/js/home/swiper-bundle.min.js' %}"></script>
+    <script>
+        var swiper = new Swiper(".brand-slider", {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          loop: true,
+          autoPlay: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            575: {
+                slidesPerView: 2,
+            },
+            991: {
+                slidesPerView: 3,
+            },
+          },
+        });
+
+        var swiper = new Swiper(".banner", {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            575: {
+                slidesPerView: 2,
+            },
+            807: {
+                slidesPerView: 3,
+            },
+            991: {
+                slidesPerView: 4,
+            },
+          },
+        });
+      </script>
+</body>
+</html>

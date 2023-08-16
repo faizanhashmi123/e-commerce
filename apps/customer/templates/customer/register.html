@@ -1,0 +1,161 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  {% load static %}
+  {% load i18n %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>registration</title>
+    <link rel="stylesheet" href="{% static 'admin-assets/css/customer/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'admin-assets/css/customer/style.css' %}">
+     <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="login-box registration-box">
+        <div class="container text-center">
+            <div class="login-head">
+                {% for message in messages %} {% if message.tags %}
+                    <div
+                      class="alert alert-{{ message.tags }} alert-dismissible"
+                      role="alert"
+                    >
+                      {{ message }}
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    {% else %}
+                    <div
+                      class="alert alert-info alert-dismissible"
+                      role="alert"
+                    >
+                      {{ message }}
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true"></span>
+                      </button>
+                    </div>                  {% endif %} {% endfor %}
+                <div class="loginsec">
+                    <div class="left">
+                        <img src="{% static 'admin-assets/img/customer/left-bg.jpg' %}" alt="" class="left-bg">
+                    </div>
+                    <div class="right">
+
+
+                        <form method="POST" action="{% url 'register_customer' %}">
+                             {% csrf_token %}
+                            <div class="logo">
+                                <img src="{% static 'admin-assets/img/customer/logo.png' %}" alt="logo-img" class="img-fluid">
+                            </div>
+                            <h3 class="form-heading">Registration</h3>
+                            <div class="form-group">
+                                <label for="" class="form-label">Your name</label>
+                                {% render_field form.first_name class="form-control" id="name" placeholder="Name" required="required" %}
+                          </div>
+
+                            <div class="input-box">
+                                <label for="" class="form-label">Mobile number</label>
+                               {% render_field form.phone_number class="form-control"  id="number" placeholder="Phone Number" required="required"  %}
+
+
+                            </div>
+                            <div class="input-box">
+                                <label for="" class="form-label">Email</label>
+                                {% render_field user_form.email class="form-control" placeholder="Email" %}
+                            </div>
+                            <div class="input-box">
+                                <label for="" class="form-label">Password</label>
+                                {% render_field user_form.password1 class="form-control" placeholder="Password" %}
+                            </div>
+                            <div class="mb-3">
+                                <button  type="submit" class="btn btn-warning">Continue</button>
+
+                            </div>
+                            <div class="mb-3">
+                                <p class="mb-0">Already have an account? <a href="{% url 'login' %}">Sign in</a></p>
+                                <p>back to <a href="{% url 'login' %}">login.</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="login-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="footer-nav">
+                                <li class="copy_item">
+                                    <a href="#" class="link"> Conditions of Use </a>
+                                </li>
+                                <li class="copy_item">
+                                    <a href="#" class="link"> Privacy Notice  </a>
+                                </li>
+                                <li class="copy_item">
+                                    <a href="#" class="link"> Help  </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="copy_right ">
+                                <p>© 1996-2023, Lorem ipsome is a dummy text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="{% static 'admin-assets/js/customer/bootstrap.bundle.min.js' %}">
+
+    </script>
+  <script>
+    const inputElements = document.getElementById('name');
+        inputElements.addEventListener('input', function(event) {
+            const inputValue = event.target.value;
+            const alphabeticValue = inputValue.replace(/[^a-zA-Z]/g, '')
+            event.target.value = alphabeticValue;
+        });
+
+     const inputElement = document.getElementById('number');
+        inputElement.addEventListener('input', function(event) {
+            let inputValue = event.target.value;
+            inputValue = inputValue.replace(/\D/g, '');
+            if (inputValue.length > 10) {
+                inputValue = inputValue.slice(0, 10);
+            }
+            event.target.value = inputValue
+        });
+
+  </script>
+  </body>
+</html>
+
+
+
+

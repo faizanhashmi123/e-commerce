@@ -1,0 +1,137 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'admin-assets/css/customer/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'admin-assets/css/customer/style.css' %}">
+        <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      .errorlist {
+        list-style-type: none;
+        color: red;
+      }
+    </style>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <section class="login-box">
+        <div class="container text-center">
+
+            <div class="login-head">
+                   {% for message in messages %} {% if message.tags %}
+                    <div
+                      class="alert alert-{{ message.tags }} alert-dismissible"
+                      role="alert"
+                    >
+                      {{ message }}
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    {% else %}
+                    <div
+                      class="alert alert-info alert-dismissible"
+                      role="alert"
+                    >
+                      {{ message }}
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>                  {% endif %} {% endfor %}
+                <div class="loginsec">
+
+                    <div class="left">
+                        <img src="{% static 'admin-assets/img/customer/left-bg.jpg' %}" alt="" class="left-bg">
+                    </div>
+                    <div class="right">
+                        <form method="post" action="{% url 'login' %}">
+                            {% csrf_token %}
+                            <div class="logo">
+                                <img src="{% static 'admin-assets/img/customer/logo.png' %}" alt="logo-img" class="img-fluid">
+                            </div>
+                            <h3 class="form-heading">Sign in</h3>
+                            <div class="input-box">
+                                <label for="" class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control" id="" aria-describedby="emailHelp" required>
+                            </div>
+                             <div class="input-box">
+                                <label for="" class="form-label">password</label>
+                                <input type="password" name="password" class="form-control" id="" aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="input-box">
+                                <button class="btn btn-warning mb-3">Continue</button>
+                            </div>
+                            <div class="input-box">
+                                <p class="info">Lorem ipsum dolor  amet consectetur. <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a></p>
+                            </div>
+                            <a class="read-article" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Need help?</a>
+                              <div class="collapse" id="collapseExample">
+                                  <ul class="need-help">
+                                      <li><a href="#">Forgot Password</a></li>
+                                      <li><a href="#">Other issues with Sign-In</a></li>
+                                  </ul>
+                              </div>
+                              <a href="{% url 'register_customer' %}" class="btn btn-dark">Create account</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="login-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="footer-nav">
+                                <li class="copy_item">
+                                    <a href="#" class="link"> Conditions of Use </a>
+                                </li>
+                                <li class="copy_item">
+                                    <a href="#" class="link"> Privacy Notice  </a>
+                                </li>
+                                <li class="copy_item">
+                                    <a href="#" class="link"> Help  </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="copy_right ">
+                                <p>© 1996-2023, Lorem ipsome is a dummy text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="{% static 'admin-assets/js/customer/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>
